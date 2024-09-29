@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+body {
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  font-size: 1.125rem;
+  transition: 250ms;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.flow-content--s > * + * {
+  margin-top: 0.5rem !important;
+}
+.flow-content--m > * + * {
+  margin-top: 1rem !important;
+}
+.flow-content--xm > * + * {
+  margin-top: 1.5rem !important;
+}
+.flow-content--l > * + * {
+  margin-top: 3rem !important;
+}
+.flow-content--xl > * + * {
+  margin-top: 3.5rem !important;
+}
+
+/* Button styles */
+
+.btn--primary {
+  @apply bg-[#FF52C1] text-white text-lg rounded-full duration-300 hover:bg-[#FF8ED7];
+}
+
+.btn--secondary {
+  @apply bg-white text-[#FF52C1] text-lg rounded-full duration-300   border-2 border-[#FF52C1] hover:border-[#FF8ED7] hover:text-[#FF8ED7] py-1;
+}
+
+/* hero styles */
+
+.hero {
+  min-height: calc(100vh - 177px);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 37.5em) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  html {
+    font-size: 70%;
+  }
+
+  .logo {
+    @apply w-[150px];
+  }
+
+  .btn--secondary {
+    padding: 0.5em 1.5em;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  .logo {
+    @apply w-[125px];
+  }
+}
